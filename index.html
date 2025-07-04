@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robo Skillz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+   <!-- ...existing code... -->
+<nav class="bg-gray-800 text-white text-lg font-bold py-4 px-6 flex items-center justify-center md:justify-between space-x-10 shadow-md sticky top-0 z-50">
+  <!-- Logo on the left -->
+  <div class="flex items-center space-x-3">
+    <img src="robo skillz logo.png" alt="robo skillz Logo" class="h-10 w-10 rounded-full object-cover" />
+    <span class="hidden md:inline text-xl font-extrabold">Robo Skillz</span>
+  </div>
+  <!-- Navigation links -->
+  <div class="flex space-x-10">
+    <a href="index.html" class="hover:text-yellow-300">Home</a>
+    <a href="shopping.html".html" class="hover:text-yellow-300">Shop</a>
+    <a href="images.html" class="hover:text-yellow-300">Images</a>
+    <a href="about.htm" class="hover:text-yellow-300">About</a>
+    <!-- <a href="contact.html" class="hover:text-yellow-300">Contact</a> -->
+  </div>
+</nav>
+<!-- ...existing code... -->
+
+  <!-- Video Background Header -->
+  <header class="relative h-[40vh] md:h-[60vh] w-full">
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="5194-183786499_medium.mp4" type="video/mp4">
+    </video>
+     <!-- <video autoplay muted loop class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="5194-183786499_medium.mp4" type="video/mp4">
+  </video> -->
+    <div class="flex flex-col items-center justify-center h-full text-center overlay">
+        <h1 class="text-6xl font-extrabold text-Orange-500 drop-shadow-md">WELCOME IN </h1>
+        <h2 class="text-6xl font-extrabold text-pink-500 drop-shadow-md">Robo Skillz</h2>
+      <p class="mt-4 text-xl text-yellow-300">Explore the Future of Robotics</p>
+    </div>
+  </header>
+
+  
+
+  <!-- Projects Section -->
+  <section id="home" class="py-16 px-4 bg-black bg-opacity-60">
+    <h2 class="text-4xl text-center font-extrabold text-white mb-10">My Robot Projects</h2>
+    <div class="grid gap-10 md:grid-cols-3 sm:grid-cols-2">
+      <div class="bg-white text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="line follower.avif" class="w-full h-48 object-cover" alt="Robot 1">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Line Follower Robot</h3>
+          <p class="mb-4">This robot uses IR sensors to follow a black line.</p>
+          <a href="#" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800">View Project</a>
+        </div>
+      </div>
+      <div class="bg-white text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="made-solver-robot-kit.webp" class="w-full h-48 object-cover" alt="Robot 2">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Maze Solver Robot</h3>
+          <p class="mb-4">Controlled using mobile via Bluetooth module.</p>
+          <a href="https://docs.google.com/document/d/1uaYgOoMe2Se_jG7tWlrRkmXwYci0VBb4vqqkT53XLM8/edit?usp=drivesdk" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">View Project</a>
+        </div>
+      </div>
+      <div class="bg-white text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="robo race.jpeg" class="w-full h-48 object-cover" alt="Robot 3">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Robo Race</h3>
+          <p class="mb-4">Avoids objects using ultrasonic sensors.           </p>
+          <a href="https://docs.google.com/document/d/1SlyZYpuaesMhqSghYuu1hYNxMNhoo5NlcZjMAyWmwZM/edit?usp=drivesdk" class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-800">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-60 text-white text-center py-6">
+    <p>&copy; 2025 Robo Skill'z. Crafted with 🚀 and 🎨</p>
+  </footer>
+
+</body>
+</html>

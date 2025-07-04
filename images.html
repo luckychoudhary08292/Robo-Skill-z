@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - LKYDG Worries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="text-bg-black">
+
+     <!-- ...existing code... -->
+<nav class="bg-gray-800 text-white text-lg font-bold py-4 px-6 flex items-center justify-center md:justify-between space-x-10 shadow-md sticky top-0 z-50">
+  <!-- Logo on the left -->
+  <div class="flex items-center space-x-3">
+    <img src="robo skillz logo.png" alt="robo skillz Logo" class="h-10 w-10 rounded-full object-cover" />
+    <span class="hidden md:inline text-xl font-extrabold">Robo Skillz</span>
+  </div>
+  <!-- Navigation links -->
+  <div class="flex space-x-10">
+    <a href="index.html" class="hover:text-cyan-300">Home</a>
+    <a href="shopping.html" class="text-yellow-300 underline">Shop</a>
+    <a href="images.html" class="hover:text-cyan-300">Images</a>
+    <a href="about.htm" class="hover:text-cyan-300">About</a>
+    <!-- <a href="contact.html" class="hover:text-cyan-300">Contact</a> -->
+  </div>
+</nav>
+<!-- ...existing code... -->
+
+  <!-- Video Header -->
+  <header class="relative h-[40vh] md:h-[60vh] w-full">
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="5194-183786499_medium.mp4" type="video/mp4">
+    </video>
+    <div class="flex flex-col items-center justify-center h-full text-center overlay">
+      <h1 class="text-6xl font-extrabold text-teal-300 drop-shadow-md">Memories & Achievements</h1>
+      <p class="mt-4 text-xl text-cyan-200">A journey of passion in every pixel</p>
+    </div>
+  </header>
+
+  <!-- ...existing code... -->
+
+<section id="gallery" class="py-16 px-6 bg-gradient-to-br from-gray-800 via-black to-gray-900">
+  <h2 class="text-4xl text-center font-extrabold text-cyan-300 mb-10">Photo Gallery</h2>
+  
+  <!-- Filter Buttons -->
+  <div class="flex justify-center gap-6 mb-8">
+    <button class="filter-btn bg-gray-700 text-bg-black px-4 py-2 rounded hover:bg-cyan-500 hover:text-black font-bold" data-filter="all">All</button>
+    <button class="filter-btn bg-gray-700 text-bg-black px-4 py-2 rounded hover:bg-cyan-500 hover:text-black font-bold" data-filter="photos">Photos</button>
+    <!-- <button class="filter-btn bg-gray-700 text-bg-black px-4 py-2 rounded hover:bg-cyan-500 hover:text-black font-bold" data-filter="videos">videos</button> -->
+    <button class="filter-btn bg-gray-700 text-bg-black px-4 py-2 rounded hover:bg-cyan-500 hover:text-black font-bold" data-filter="robot">Robot</button>
+    <button class="filter-btn bg-gray-700 text-bg-black px-4 py-2 rounded hover:bg-cyan-500 hover:text-black font-bold" data-filter="achievements">Achievements</button>
+  </div>
+
+  <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+
+    <!-- -------------------------------Achievements------------------------------- -->
+    <img src="Achievement1.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">    
+    <img src="Achievement2.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement3.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement4.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement8.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement6.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement10.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+    <img src="Achievement9.jpg" alt="Achievements" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="achievements">
+
+    <!-- ------------------------------------Robots------------------------------------ -->
+    <img src="Robot1.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">    
+    <img src="Robot2.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot3.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot4.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot5.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot6.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot7.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot8.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+    <img src="Robot9.jpg" alt="Robot" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="robot">
+
+    <!-- ----------------------------------------Phtotos---------------------------------------- -->
+    <img src="image2.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image3.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">  
+    <img src="image4.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image5.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image6.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image8.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image9.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image10.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image11.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image13.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image15.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+    <img src="image16.jpg" alt="Photo" class="gallery-img w-[350px] h-[200px] object-cover rounded-xl border-4 border-cyan-500 shadow-xl hover:scale-105 transition duration-300 cursor-pointer bg-black p-2" data-category="photos">
+
+
+   
+   <!-- -------------------------------------------------------End of Videos---------------------------------------- --> 
+  </div>
+</section>
+
+<!-- ...modal and script... -->
+
+<script>
+  // Filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      document.querySelectorAll('.gallery-img').forEach(img => {
+        if (filter === 'all' || img.getAttribute('data-category') === filter) {
+          img.style.display = '';
+        } else {
+          img.style.display = 'none';
+        }
+      });
+
+  // Handle videos
+    document.querySelectorAll('.gallery-video').forEach(video => {
+      if (filter === 'all' || video.getAttribute('data-category') === filter) {
+        video.style.display = '';
+      } else {
+        video.style.display = 'none';
+      }
+    });
+  });
+});
+
+  // ...existing modal/gallery script...
+</script>
+
+<!-- Modal for full screen image with navigation -->
+<div id="imgModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <button id="prevBtn" class="absolute left-6 top-1/2 transform -translate-y-1/2 text-bg-black text-5xl font-bold px-4 py-2 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 select-none">&lt;</button>
+  <img id="modalImg" src="" class="max-h-[100vh] max-w-[100vw] rounded-xl shadow-2xl border-4 border-pink" />
+  <button id="nextBtn" class="absolute right-6 top-1/2 transform -translate-y-1/2 text-bg-black text-5xl font-bold px-4 py-2 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 select-none">&gt;</button>
+  <span class="absolute top-6 right-10 text-bg-black text-4xl cursor-pointer select-none" onclick="closeModal()">&times;</span>
+</div>
+
+<script>
+  // Collect all gallery images
+  const images = Array.from(document.querySelectorAll('.gallery-img')).map(img => img.src);
+  let currentIndex = 0;
+
+  // Open modal at specific index
+  function openModalAt(index) {
+    currentIndex = index;
+    document.getElementById('modalImg').src = images[currentIndex];
+    document.getElementById('imgModal').classList.remove('hidden');
+  }
+
+  // Add click event to each image
+  document.querySelectorAll('.gallery-img').forEach((img, idx) => {
+    img.addEventListener('click', () => openModalAt(idx));
+  });
+
+  function closeModal() {
+    document.getElementById('imgModal').classList.add('hidden');
+    document.getElementById('modalImg').src = '';
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('modalImg').src = images[currentIndex];
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('modalImg').src = images[currentIndex];
+  }
+
+  document.getElementById('nextBtn').onclick = showNext;
+  document.getElementById('prevBtn').onclick = showPrev;
+
+  // Optional: Close modal on background click
+  document.getElementById('imgModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // Optional: Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('imgModal').classList.contains('hidden')) {
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'Escape') closeModal();
+    }
+  });
+</script>
+<!-- ...existing code... -->
+
+
+<!-- --------------------------------------------------- for video section ------------------------------
+  -->
+<!-- ...existing code... -->
+
+<!-- Add your video thumbnails to the gallery grid, just like images -->
+<!-- ...add more videos as needed... -->
+
+<!-- ...existing code... -->
+
+<!-- Video Modal for full screen playback with navigation -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+  <button id="prevVideoBtn" class="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold px-4 py-2 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 select-none">&lt;</button>
+  <video id="modalVideo" controls class="max-h-[90vh] max-w-[95vw] rounded-xl shadow-2xl border-4 border-pink-500 bg-black"></video>
+  <button id="nextVideoBtn" class="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold px-4 py-2 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 select-none">&gt;</button>
+  <span class="absolute top-6 right-10 text-white text-4xl cursor-pointer select-none" onclick="closeVideoModal()">&times;</span>
+</div>
+
+<script>
+  // --- Video Modal Functionality ---
+  function getVisibleVideos() {
+    return Array.from(document.querySelectorAll('.gallery-video'))
+      .filter(vid => vid.style.display !== 'none');
+  }
+  let currentVideoIndex = 0;
+
+  function openVideoModalAt(index) {
+    const visibleVideos = getVisibleVideos();
+    currentVideoIndex = index;
+    const modalVideo = document.getElementById('modalVideo');
+    modalVideo.src = visibleVideos[currentVideoIndex].src;
+    modalVideo.poster = visibleVideos[currentVideoIndex].poster;
+    modalVideo.load();
+    document.getElementById('videoModal').classList.remove('hidden');
+  }
+
+  function addGalleryVideoListeners() {
+    getVisibleVideos().forEach((vid, idx) => {
+      vid.onclick = () => openVideoModalAt(idx);
+    });
+  }
+  addGalleryVideoListeners();
+
+  function closeVideoModal() {
+    document.getElementById('videoModal').classList.add('hidden');
+    document.getElementById('modalVideo').pause();
+    document.getElementById('modalVideo').src = '';
+  }
+
+  function showNextVideo() {
+    const visibleVideos = getVisibleVideos();
+    currentVideoIndex = (currentVideoIndex + 1) % visibleVideos.length;
+    const modalVideo = document.getElementById('modalVideo');
+    modalVideo.src = visibleVideos[currentVideoIndex].src;
+    modalVideo.poster = visibleVideos[currentVideoIndex].poster;
+    modalVideo.load();
+  }
+
+  function showPrevVideo() {
+    const visibleVideos = getVisibleVideos();
+    currentVideoIndex = (currentVideoIndex - 1 + visibleVideos.length) % visibleVideos.length;
+    const modalVideo = document.getElementById('modalVideo');
+    modalVideo.src = visibleVideos[currentVideoIndex].src;
+    modalVideo.poster = visibleVideos[currentVideoIndex].poster;
+    modalVideo.load();
+  }
+
+  document.getElementById('nextVideoBtn').onclick = showNextVideo;
+  document.getElementById('prevVideoBtn').onclick = showPrevVideo;
+
+  // Optional: Close modal on background click
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+
+  // Optional: Keyboard navigation for videos
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('videoModal').classList.contains('hidden')) {
+      if (e.key === 'ArrowRight') showNextVideo();
+      if (e.key === 'ArrowLeft') showPrevVideo();
+      if (e.key === 'Escape') closeVideoModal();
+    }
+  });
+
+  // Re-attach listeners after filtering
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(addGalleryVideoListeners, 100);
+    });
+  });
+</script>
+
+  <!-- ------------------------------------------------End of video section ------------------------------ -->
+
+  <!-- Footer -->
+  <footer class="bg-white text-bg-w text-center py-6">
+    <p>&copy; 2025 Robo Skill'z. Built with ❤️ & Creativity</p>
+  </footer>
+
+</body>
+</html>

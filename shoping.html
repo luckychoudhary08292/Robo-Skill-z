@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robo Skillz | Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 text-white text-lg font-bold py-4 px-6 flex items-center justify-center md:justify-between space-x-10 shadow-md sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="robo skillz logo.png" alt="robo skillz Logo" class="h-10 w-10 rounded-full object-cover" />
+      <span class="hidden md:inline text-xl font-extrabold">Robo Skillz</span>
+    </div>
+    <div class="flex space-x-10">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="shopping.html" class="text-yellow-300 underline">Shop</a>
+      <a href="images.html" class="hover:text-yellow-300">Images</a>
+      <a href="about.htm" class="hover:text-yellow-300">About</a>
+    </div>
+  </nav>
+
+  <!-- Video Background -->
+  <header class="relative h-[40vh] md:h-[60vh] w-full">
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="5194-183786499_medium.mp4" type="video/mp4">
+    </video>
+    <div class="flex flex-col items-center justify-center h-full overlay text-center">
+      <h1 class="text-5xl font-extrabold text-orange-400 drop-shadow-lg">Robo Skillz Store</h1>
+      <p class="mt-2 text-xl text-yellow-300">Order robotics components easily on WhatsApp</p>
+    </div>
+  </header>
+
+  <!-- Shop Section -->
+  <section class="py-16 px-6 bg-gray-500 bg-opacity-60">
+    <h2 class="text-4xl text-center font-extrabold text-cyan-900 mb-6">Our Products</h2>
+
+    <!-- Search -->
+    <div class="max-w-md mx-auto mb-10">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search components..."
+        class="w-full px-4 py-3 text-black rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        onkeyup="searchProducts()"
+      />
+    </div>
+
+    <!-- Product Cards -->
+    <div id="productContainer" class="grid gap-10 md:grid-cols-3 sm:grid-cols-2">
+
+      <!-- ✅ Product 1 -->
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Arduino_uno.webp" class="w-full object-contain h-48 bg-white" alt="Arduino UNO">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Arduino UNO</h3>
+          <p class="mb-4">₹450 - Ideal microcontroller for beginners</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-UNO" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('Arduino UNO', 450, 'Arduino_uno.webp', 'qty-UNO')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Product 2 -->
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="DC-BO-Gear_Motor.webp" class="w-full object-contain h-48 bg-white" alt="DC-BO Gear Motor">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">DC-BO Gear Motor</h3>
+          <p class="mb-4">₹120 - Gear motor for mobile robots</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-BO" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('DC-BO Gear Motor', 120, 'DC-BO-Gear_Motor.webp', 'qty-BO')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Product 3 -->
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Arduino_nano.jpg" class="w-full object-contain h-48 bg-white" alt="Arduino Nano">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Arduino Nano</h3>
+          <p class="mb-4">₹300 - Compact microcontroller for tight spaces</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-nano" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('Arduino Nano', 120, 'Arduino_nano.jpg', 'qty-nano')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>        
+        </div>
+      </div>
+
+      <!-- ✅ Product 4 -->
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Raspberry_pi.webp" class="w-full object-contain h-48 bg-white" alt="Raspberry Pi">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Raspberry Pi</h3>
+          <p class="mb-4">₹3500 - Mini computer for advanced robotics</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-pi" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('Raspberry Pi', 120, 'Raspberry_pi.webp', 'qty-pi')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>          
+        </div>
+      </div>
+
+      <!-- ✅ Product 5 -->
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="motor_driver.webp" class="w-full object-contain h-48 bg-white" alt="Motor Driver">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">L293D Motor Driver</h3>
+          <p class="mb-4">₹150 - Control two DC motors easily</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-driver" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('L293D Motor Driver', 150, 'motor_driver.webp', 'qty-driver')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>        
+        </div>
+      </div>
+
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="DC-N20-Gear_Motor.jpeg" class="w-full object-contain h-48 bg-white" alt="DC-N20-Gear_Motor">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">DC-N20 Gear Motor</h3>
+          <p class="mb-4">₹2000 - Short description</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-n20" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('DC-N20 Gear Motor', 2000, 'DC-N20-Gear_Motor.jpeg', 'qty-n20')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>         
+        </div>
+      </div>
+
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Dc-12v-Gear_Motor.webp" class="w-full object-contain h-48 bg-white" alt="Dc-12v-Gear_Motor" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">DC 12v Gear Motor </h3>
+          <p class="mb-4">₹Your Price - Short description</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-12v" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('DC 12v Gear Motor', 2000, 'Dc-12v-Gear_Motor.webp', 'qty-12v')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>        
+        </div>
+      </div>
+
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Wheel.webp" class="w-full object-contain h-48 bg-white" alt="Wheel">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Wheel</h3>
+          <p class="mb-4">₹80/piece - Rouber Wheel</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-wheel" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('Wheel', 80, 'wheel.webp', 'qty-wheel')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="Jumper_wires.webp" class="w-full object-contain h-48 bg-white" alt="Jumper_wires">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Jumper_wires</h3>
+          <p class="mb-4">₹50/m - jumper wire</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-jumper" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow(' Jumper_wires', 450, 'Jumper_wires.webp', 'qty-jumper')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>       
+        </div>
+      </div>
+      <!-- 🆕 Copy this block to add more products -->
+      <!--
+      <div class="product bg-blue-200 text-black rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300">
+        <img src="your_image_name.jpg" class="w-full object-contain h-48 bg-white" alt="Your Product Name">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Your Product Name</h3>
+          <p class="mb-4">₹Your Price - Short description</p>
+          <div class="flex items-center space-x-2 mt-3">
+            <label class="text-sm">Qty:</label>
+            <input type="number" id="qty-product" min="1" value="1" class="w-16 px-2 py-1 text-black rounded border border-gray-400 focus:outline-none" />
+            <button onclick="orderNow('Arduino UNO', 450, 'Arduino_uno.webp', 'qty-product')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800">Order</button>
+          </div>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-60 text-white text-center py-6">
+    <p>&copy; 2025 Robo Skillz. Built with ❤️ and 🤖</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function orderNow(product, price, imageUrl, qtyId) {
+      const phone = "9165165035";
+      const quantity = document.getElementById(qtyId)?.value || 1;
+      const total = price * quantity;
+      const message = `🛒 Order Request: \n Product: *${product} \n Quantity: ${quantity}*${price} \n Total Price: ₹${total}`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    function searchProducts() {Arduino
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll("#productContainer .product");
+      cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        const desc = card.querySelector("p").textContent.toLowerCase();
+        card.style.display = (name.includes(input) || desc.includes(input)) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>

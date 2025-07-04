@@ -1,0 +1,12 @@
+/* style.css */
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a5b4fc;
+}

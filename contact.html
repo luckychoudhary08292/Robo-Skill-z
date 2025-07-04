@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - LKYDG Worries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+  </style>
+</head>
+<body class="text-white bg-gradient-to-br from-green-500 via-blue-500 to-purple-600 min-h-screen flex flex-col">
+   <!-- Navigation Bar -->
+  <nav class="bg-gray-800 text-white text-lg font-bold py-4 px-6 flex justify-center space-x-10 shadow-md sticky top-0 z-50">
+    <a href="index.html" class="hover:text-yellow-300">Home</a>
+    <a href="images.html" class="hover:text-yellow-300">Images</a>
+    <a href="about.htm" class="hover:text-yellow-300">About</a>
+    <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+  </nav>
+
+  <video autoplay muted loop class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="5194-183786499_medium.mp4" type="video/mp4">
+  </video>
+  
+    <header class="py-6 text-center text-4xl font-extrabold text-white">
+    Contact Us
+  </header>
+  <main class="flex-grow">
+    <section class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg text-black space-y-4">
+      <h2 class="text-2xl font-bold text-center mb-4">We'd Love to Hear From You</h2>
+      <form>
+        <div>
+          <label class="block font-semibold">Name</label>
+          <input type="text" class="w-full px-4 py-2 rounded border" placeholder="Your Name">
+        </div>
+        <div>
+          <label class="block font-semibold">Email</label>
+          <input type="email" class="w-full px-4 py-2 rounded border" placeholder="Your Email">
+        </div>
+        <div>
+          <label class="block font-semibold">Message</label>
+          <textarea class="w-full px-4 py-2 rounded border" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="mt-4 w-full bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-800">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="bg-black text-white text-center py-6 mt-10">
+    <p>&copy; 2025 LKYDG Worries. Crafted with 🚀 and 🎨</p>
+  </footer>
+</body>
+</html>
